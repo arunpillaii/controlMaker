@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ControlMakerWin</class>
+ <widget class="QWidget" name="ControlMakerWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>363</width>
+    <height>681</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Control Maker</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="main_VL" stretch="0,0">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="make_GB">
+       <property name="title">
+        <string>MAKE</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,0">
+        <item>
+         <layout class="QHBoxLayout" name="name_HL">
+          <item>
+           <widget class="QLabel" name="name_LB">
+            <property name="text">
+             <string>Name :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="name_LE"/>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="nameGroup_CB">
+            <property name="text">
+             <string>Group</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="makeType_HL" stretch="0,0,1">
+          <item>
+           <widget class="QLabel" name="type_LB">
+            <property name="text">
+             <string>Type :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="type_HL">
+            <item>
+             <widget class="QRadioButton" name="type2D_RB">
+              <property name="text">
+               <string>2D</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="type3D_RB">
+              <property name="text">
+               <string>3D</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QComboBox" name="controlType_CB"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="createControl_BN">
+          <property name="text">
+           <string>Create</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="edit_GB">
+       <property name="title">
+        <string>EDIT</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="translation_GB">
+          <property name="title">
+           <string>TRANSLATION</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <layout class="QHBoxLayout" name="transOrientation_HL">
+             <item>
+              <widget class="QLabel" name="transOrientation_LB">
+               <property name="text">
+                <string>Orientation :</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="transOrientation_CB">
+               <property name="layoutDirection">
+                <enum>Qt::RightToLeft</enum>
+               </property>
+               <item>
+                <property name="text">
+                 <string>World</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Object</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Local</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="transAxis_LB">
+               <property name="text">
+                <string>Axis :</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="transAxis_CB">
+               <property name="layoutDirection">
+                <enum>Qt::RightToLeft</enum>
+               </property>
+               <item>
+                <property name="text">
+                 <string>X</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Y</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Z</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="transValue_HL_2" stretch="0,1,0">
+             <item>
+              <widget class="QLabel" name="transValue_LB">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>Value :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="transValue_DS">
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::UpDownArrows</enum>
+               </property>
+               <property name="decimals">
+                <number>2</number>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="transReverse_CB">
+               <property name="text">
+                <string>Reverse</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="translate_BN">
+             <property name="text">
+              <string>Translate</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="rotation_GB">
+          <property name="title">
+           <string>ROTATION</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <layout class="QHBoxLayout" name="orientation_HL">
+             <item>
+              <widget class="QLabel" name="orientation_LB">
+               <property name="text">
+                <string>Orientation :</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="orientation_CB">
+               <property name="layoutDirection">
+                <enum>Qt::RightToLeft</enum>
+               </property>
+               <item>
+                <property name="text">
+                 <string>World</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Object</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rotationAxis_LB">
+               <property name="text">
+                <string>Axis :</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="rotationAxis_CB">
+               <property name="layoutDirection">
+                <enum>Qt::RightToLeft</enum>
+               </property>
+               <item>
+                <property name="text">
+                 <string>X</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Y</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Z</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="transValue_HL" stretch="0,0,0,0,1">
+             <item>
+              <widget class="QLabel" name="rotationValue_LB">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>Value :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="rotationValue_DS">
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::UpDownArrows</enum>
+               </property>
+               <property name="decimals">
+                <number>2</number>
+               </property>
+               <property name="value">
+                <double>90.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="rotationReverse_CB">
+               <property name="text">
+                <string>Reverse</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="rotationPivot_LB">
+               <property name="text">
+                <string>Pivot</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="rotationPivot_CB">
+               <property name="layoutDirection">
+                <enum>Qt::RightToLeft</enum>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Transform</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Object</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="rotation_BN">
+             <property name="text">
+              <string>Rotate</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="scale_GB">
+          <property name="title">
+           <string>SCALE</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <layout class="QHBoxLayout" name="scalePivot_HL">
+             <item>
+              <widget class="QLabel" name="scalePivot_LB">
+               <property name="text">
+                <string>Pivot:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="scalePivot_CB">
+               <property name="layoutDirection">
+                <enum>Qt::RightToLeft</enum>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Transform</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Object</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="sacleValue_LB">
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>Value :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="scaleValue_DS">
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::UpDownArrows</enum>
+               </property>
+               <property name="decimals">
+                <number>2</number>
+               </property>
+               <property name="value">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="scaleReverse_CB">
+               <property name="text">
+                <string>Reverse</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="scaleValue_HL" stretch="0,0,0,0">
+             <item>
+              <widget class="QLabel" name="scaleAxis_LB">
+               <property name="text">
+                <string>Axis :</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="scaleX_CB">
+               <property name="text">
+                <string>X</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="scaleY_CB">
+               <property name="text">
+                <string>Y</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="scaleZ_CB">
+               <property name="text">
+                <string>Z</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="scale_BN">
+             <property name="text">
+              <string>Scale</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="mirror_GB">
+          <property name="title">
+           <string>MIRROR</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <layout class="QHBoxLayout" name="mirrorSearch_HL">
+             <item>
+              <widget class="QLabel" name="search_LB">
+               <property name="text">
+                <string>Search for</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="search_LE">
+               <property name="text">
+                <string>Left</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="replace_LB">
+               <property name="text">
+                <string>Replace with</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="replace_LE">
+               <property name="text">
+                <string>Right</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="mirror_BN">
+             <property name="text">
+              <string>Mirror</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
